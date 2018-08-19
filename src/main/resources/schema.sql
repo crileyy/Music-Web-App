@@ -1,4 +1,6 @@
 CREATE TABLE SONG(
-  title VARCHAR(50) NOT NULL,
-  artist VARCHAR (50) NOT NULL
+  title VARCHAR(100) NOT NULL,
+  artist VARCHAR (100) NOT NULL,
+  youtube VARCHAR (100) NOT NULL,
+  genre VARCHAR (50) NULL
 );

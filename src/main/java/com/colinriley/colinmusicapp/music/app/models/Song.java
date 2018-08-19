@@ -19,6 +19,12 @@ public class Song {
   @Column(name = "artist")
   private String artist;
 
+  @Column(name = "youtube")
+  private String youtube;
+
+  @Column(name = "genre")
+  private String genre;
+
   public Song(String title, String artist) {
     this.title = title;
     this.artist = artist;
@@ -26,6 +32,22 @@ public class Song {
 
   public Song() {
 
+  }
+
+  public String getGenre() {
+    return genre;
+  }
+
+  public void setGenre(String genre) {
+    this.genre = genre;
+  }
+
+  public String getYoutube() {
+    return youtube;
+  }
+
+  public void setYoutube(String youtube) {
+    this.youtube = youtube;
   }
 
   public String getTitle() {
