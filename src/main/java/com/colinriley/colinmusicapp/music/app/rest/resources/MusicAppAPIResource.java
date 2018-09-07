@@ -58,7 +58,7 @@ public class MusicAppAPIResource {
   @RequestMapping(path = "link", method = RequestMethod.GET)
   public ResponseEntity<String> linkFromTitle(@RequestParam("title") String title) {
     Song song = this.repository.findByTitleIgnoreCaseContaining(title);
-    return new ResponseEntity<>(song.getYoutube(), HttpStatus.OK);
+    return new ResponseEntity<>(song.getYoutubeId(), HttpStatus.OK);
   }
 
   /**
@@ -82,7 +82,7 @@ public class MusicAppAPIResource {
    );
 
 
-   Tables: songs, genres, playlists
+   Tables: songs, genres, playlists, playlist_songs, artists
    */
 
 }

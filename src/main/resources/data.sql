@@ -1,3 +1,1 @@
-INSERT INTO SONGS VALUES ('HELLO', 'WORLD', 'https://www.youtube.com', NULL);
-INSERT INTO SONGS VALUES ('I Sat By The Ocean', 'Queens Of The Stone Age', 'https://www.youtube.com', NULL );
-INSERT INTO SONGS VALUES ('Ill Try Anything Once', 'The Strokes', 'https://www.youtube.com/watch?v=0RDq5PKcN5g', 'rock' );
+INSERT INTO SONGS (title, artist, youtubeId, genre) VALUES ('Ill Try Anything Once', 'The Strokes', '0RDq5PKcN5g', 'rock' );
