@@ -80,6 +80,9 @@ public class MusicAppAPIResource {
    link VARCHAR (100) NOT NULL
    genre VARCHAR
    );
+
+
+   Tables: songs, genres, playlists
    */
 
 }
