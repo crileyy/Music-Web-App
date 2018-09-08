@@ -11,24 +11,24 @@ import javax.persistence.Table;
  * Created by criley on 2/18/18.
  */
 @Entity
-@Table(name="songs")
+@Table(name="SONGS")
 public class Song {
 
   @Id
   @GeneratedValue(strategy= GenerationType.AUTO)
-  @Column(name = "songId")
+  @Column(name = "SONG_ID")
   private Integer songId;
 
-  @Column(name = "title")
+  @Column(name = "TITLE")
   private String title;
 
-  @Column(name = "artist")
+  @Column(name = "ARTIST")
   private String artist;
 
-  @Column(name = "youtubeId")
+  @Column(name = "YOUTUBE_ID")
   private String youtubeId;
 
-  @Column(name = "genre")
+  @Column(name = "GENRE")
   private String genre;
 
   public Song(String title, String artist) {

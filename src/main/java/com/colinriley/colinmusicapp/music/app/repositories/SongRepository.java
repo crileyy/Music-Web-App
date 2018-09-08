@@ -9,8 +9,10 @@ import java.util.List;
 /**
  * Created by criley on 2/18/18.
  */
-public interface SongRepository extends CrudRepository<Song, String> {
+public interface SongRepository extends CrudRepository<Song, Integer> {
   Song findByArtist(String artist);
+
+  Song findBySongId(Integer songId);
 
   Song findByTitleIgnoreCase(String title);
 

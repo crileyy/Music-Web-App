@@ -26,6 +26,11 @@ public class MusicAppAPIResource {
   @Autowired
   private SongRepository repository;
 
+  /**
+   * Retrieve all the stored songs.
+   *
+   * @return A ResponseEntity with a List of all Songs
+   */
   @RequestMapping(path = "songs", method = RequestMethod.GET)
   public ResponseEntity<?> findAllSongs() {
     List<Song> songs = new ArrayList<>();
@@ -38,6 +43,12 @@ public class MusicAppAPIResource {
   @RequestMapping(path = "song", method = RequestMethod.GET)
   public ResponseEntity<Song> findSongByTitle(@RequestParam("title") String title) {
     Song song = this.repository.findByTitleIgnoreCaseContaining(title);
+    return new ResponseEntity<>(song, HttpStatus.OK);
+  }
+
+  @RequestMapping(path = "song/{songId}", method = RequestMethod.GET)
+  public ResponseEntity<Song> findSongBySongId(@PathVariable("songId") Integer songId) {
+    Song song = this.repository.findBySongId(songId);
     return new ResponseEntity<>(song, HttpStatus.OK);
   }
 
